@@ -1,0 +1,47 @@
+<html>
+  <head>
+        <title>Input tutorial</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script language="javascript">
+                function addNumbers()
+                {
+                        var val1 = Math.min(Math.max(parseInt(document.getElementById("imagequal").value),0),10);
+                        var val2 = Math.min(Math.max(parseInt(document.getElementById("storyl").value),0),10);
+                        var val3 = Math.min(Math.max(parseInt(document.getElementById("actqual").value),0),10);
+                        var val4 = Math.min(Math.max(parseInt(document.getElementById("soundqual").value),0),10);
+                        var val5 = Math.min(Math.max(parseInt(document.getElementById("setqual").value),0),10);
+                        var val6 = Math.min(Math.max(parseInt(document.getElementById("original").value),0),10);
+                        var ansD = document.getElementById("answer");
+                        ansD.value = (val1 + val2 + val3 + val4 + val5 + val6) / 6;
+                }
+        </script>
+        <style>
+          body {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+          }
+    </style>
+  </head>
+  <body background="bg.png">
+    <center>
+    <h1>Movie Rating Calculator</h1>
+    <p>
+      Only numbers between 0 and 10 work.<br />
+      Anything lower or higher  than that will either work with 0 or 10.
+    </p>
+    <table>
+
+        <tr><td>Story:</td> <td><input type="text" id="storyl" name="storyl" Placeholder="10"/></td><br /></tr>
+        <tr><td>Image Quality:</td> <td><input type="text" id="imagequal" name="imagequal" Placeholder="10"/></td><br /></tr>
+        <tr><td>Acting:</td> <td><input type="text" id="actqual" name="actqual" Placeholder="10"/></td><br /></tr>
+        <tr><td>Sound:</td> <td><input type="text" id="soundqual" name="soundqual" Placeholder="10"/></td><br /></tr>
+        <tr><td>Setting:</td> <td><input type="text" id="setqual" name="setqual" Placeholder="10"/></td><br /></tr>
+        <tr><td>Originality:</td> <td><input type="text" id="original" name="original" Placeholder="10"/></td><br /></tr>
+
+
+        <tr><td><input type="button" name="Sumbit" value="Rating:" onclick="javascript:addNumbers()"/></td>
+        <td><input type="text" id="answer" name="answer" value=""/></td></tr>
+      </table>
+    </center>
+  </body>
+</html>
